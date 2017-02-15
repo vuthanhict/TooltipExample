@@ -82,4 +82,9 @@ public class DialogPopupLeftRight extends BaseDialogFragment {
         this.mContext = context;
         this.mCallbacks = callbacks;
     }
+
+    @Override
+    protected boolean isFullScreen() {
+        return true;
+    }
 }
