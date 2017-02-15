@@ -8,6 +8,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
@@ -224,5 +225,11 @@ public class TooltipLeftRight extends RelativeLayout {
             ViewHelper.setY(mLeftPointerView, pointerY);
             ViewHelper.setY(mRightPointerView, pointerY);
         }
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return true;
     }
 }
